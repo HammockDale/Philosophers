@@ -16,9 +16,7 @@ long int	ft_usleep(long int time)
 {
 	struct timeval		start;
 	struct timeval		step;
-	unsigned long long	l;
 
-	l = 0;
 	gettimeofday(&start, NULL);
 	while (1)
 	{

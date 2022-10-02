@@ -79,7 +79,6 @@ void	*ft_fin(void *argv)
 {
 	t_philo			*philo;
 	int				i;
-	int				j;
 	struct timeval	now;
 
 	philo = (t_philo *)argv;
@@ -89,7 +88,7 @@ void	*ft_fin(void *argv)
 	{
 		while (i != philo->mas->num)
 		{
-			j = sem_wait(philo->mas->sem_eat);
+			sem_wait(philo->mas->sem_eat);
 			i++;
 			usleep(1000);
 		}

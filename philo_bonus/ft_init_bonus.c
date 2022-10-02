@@ -14,13 +14,12 @@
 
 void	ft_sem_free(t_mas *mas)
 {
-	int		i;
+	(void)mas;
 
 	sem_unlink("forks");
 	sem_unlink("sforks");
 	sem_unlink("eforks");
 	sem_unlink("killforks");
-	i = mas->num;
 	exit(0);
 }
 
